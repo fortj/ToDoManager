@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/skyBlue"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/StatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/PriorityLabel"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/statusCheckBox"
+        android:text="@string/done_string" >
+    </TextView>
+
+    <CheckBox
+        android:id="@+id/statusCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/StatusLabel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="0dp" >
+    </CheckBox>
+
+    <TextView
+        android:id="@+id/PriorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DateLabel"
+        android:layout_alignTop="@+id/DateLabel"
+        android:layout_toRightOf="@+id/dateView"
+        android:layout_marginRight="0dp"
+        android:text="@string/priority_string" >
+    </TextView>
+
+	<Spinner
+	    android:id="@+id/prioritySpinner"
+	    android:layout_width="75dp"
+	    android:layout_height="wrap_content"
+       	android:layout_toRightOf="@+id/PriorityLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        >
+	</Spinner>
+
+
+    <TextView
+        android:id="@+id/DateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/titleView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="20dp"
+        
+        android:text="@string/date_string" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/DateLabel"        
+        android:layout_toRightOf="@+id/DateLabel"
+        android:layout_marginRight="20dp">
+    </TextView>
+
+</RelativeLayout>
